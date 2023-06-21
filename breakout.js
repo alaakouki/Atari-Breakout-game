@@ -114,3 +114,18 @@ function create() {
     .on("pointerout", () => startButton.setStyle({fill: "#FFF"}));
 
 }
+
+function startGame() {
+    // By calling destroy(), we removing the start button
+    startButton.destroy();
+    // To shoot out the ball we can apply a force using setVelocity. It takes in two forces, one on the x and one on the y axis
+    ball.setVelocity(-300,-150);
+    // We set the rotation to left which we will later use to rotate the ball as it flies.
+    rotation = "left";
+
+    // to move the paddle we can add an event listener on the whole scene with input.on. Inside the callback, we set the paddle’s x position to the mouse x position. To avoid moving it outside of the screen, we force pointer.x to be between a min and a max value. This is done using the Math.Clamp method.
+    this.input.on(
+        "pointermove", pointer => {
+            paddle.x = Phaser.Math.Clamp(pointer.x, paddle.width / 2, this.game.config.width - paddle.width / 2);
+        });
+}
