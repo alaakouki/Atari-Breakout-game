@@ -1,5 +1,5 @@
 # Atari-Breakout-game
-we are going to make use of a game framework written in Javascript called Phaser.
+<!-- we are going to make use of a game framework written in Javascript called Phaser.
 
 
 Apart from the individual game objects, we can also create a constant for the text styles. Lastly, the config object will be passed to Phaser.Game to initialize the game. This configuration object takes in the following properties:
@@ -15,4 +15,4 @@ Each scene is controlled by a different set of functions
 preload is used for loading in assets such as images or sounds
 create is used for adding game objects to the scene
 update is called indefinitely and is used for animations or checks for conditions that can happen in any frame, such as the ball falling down
-
+ -->
